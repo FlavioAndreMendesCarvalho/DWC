@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 5</title>
+</head>
+<body>
+<script>
+    var decision = prompt('1 = hacer media de la nota, 2 = confirmación correo, 3 = numeros pares');
+    if (decision === "1") {
+        var nombre = prompt('Hei, colega... ¿Cómo te llamas?','');
+        var examen1 = prompt('dime la nota de tu primer examen','');
+        var examen2 = prompt('dime la nota de tu segundo examen','');
+        var examen3 = prompt('dime la nota de tu tercer examen','');
+        if ((examen1+examen2+examen3)/3 > 5){
+            document.write(nombre + " estas aprobado")
+        } else {
+            document.write(nombre + " estas suspendido")
+        }
+    } else if (decision === "2"){
+        var correo = prompt('correo','');
+        var confirmacion = prompt('confirmación','');
+        if (correo !== confirmacion){
+            document.write("el correo no es igual")
+        }
+    } else if (decision === "3"){
+        var numero = prompt('numero','');
+        if (numero%2 === 0){
+            document.write("es par")
+        } else {
+            document.write("no es par")
+        }
+    } else {
+        document.write("haaaaaaaaa")
+    }
+</script>
+</body>
+</html>
