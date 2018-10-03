@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 7</title>
+</head>
+<body>
+<script>
+    var notas = new Array(3);
+    notas[0] = prompt('primer numero', '');
+    notas[1] = prompt('Segundo numero', '');
+    notas[2] = prompt('Tercer numero', '');
+    var numeroMayor = notas[0];
+
+    for (var x = 0; x <= notas.length; x++) {
+        if (notas[x] > numeroMayor) {
+            numeroMayor = notas[x];
+        }
+    }
+    document.write(numeroMayor);
+</script>
+</body>
+</html>
