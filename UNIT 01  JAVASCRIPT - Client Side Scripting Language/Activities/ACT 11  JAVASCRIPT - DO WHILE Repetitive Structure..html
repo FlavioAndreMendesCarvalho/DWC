@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 11</title>
+</head>
+<body>
+<script>
+    var decision = prompt('¿a, b, c, d, e, f, g, h, i?');
+    switch (decision) {
+        case 'a':
+
+            var a = parseInt(prompt('dime un numero'));
+            var b = parseInt(prompt('dime otro numero'));
+
+            if ((a + b) === 0) {
+                document.write('cero');
+            } else if ((a + b) < 0) {
+                document.write('negativo')
+            } else {
+                document.write('positivo')
+            }
+
+            break;
+        case 'b':
+            var id = null;
+            var edad;
+            var sexo;
+
+            var cantidad = 0;
+            var cantidadHombres = 0;
+            var cantidadMujeres = 0;
+            var viejo = 0;
+            var nombreViejo;
+
+            while (id !== 0) {
+                id = prompt('id = ');
+                id = parseInt(id);
+                edad = prompt('edad =');
+                sexo = prompt('sexo =');
+                cantidad = cantidad + 1;
+                if (sexo === 'h') {
+                    cantidadHombres = cantidadHombres + 1;
+                } else {
+                    cantidadMujeres = cantidadMujeres + 1;
+                }
+                if(edad > viejo){
+                    viejo = edad;
+                    nombreViejo = id;
+                }
+            }
+            document.write("Hay " + cantidad + " personas, de las cuales " + cantidadHombres + " son hombres y " + cantidadMujeres
+            + " son mujeres. La persona mas vieja es la de id = " + nombreViejo + " con una edad de " + viejo + "años");
+            break;
+        default:
+            document.write('error');
+    }
+</script>
+</body>
+</html>
