@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 10</title>
+</head>
+<body>
+<script>
+    var decision = prompt('¿a, b, c, d, e, f, g, h, i?');
+    switch (decision) {
+        case 'a':
+
+            var x = 0;
+            while (x < 50) {
+                x = x + 1;
+                document.write(x);
+                document.write('<br>')
+            }
+            document.write('<br>');
+            document.write('<br>');
+            while (x > 0) {
+                x = x - 1;
+                document.write(x);
+                document.write('<br>')
+            }
+            document.write('<br>');
+            document.write('<br>');
+            x = -51;
+            while (x < 0) {
+                x = x + 1;
+                document.write(x);
+                document.write('<br>')
+            }
+
+            break;
+        case 'b':
+
+            var y = 2;
+            y = parseInt(y);
+            while (y <= 100) {
+                if(y%2 === 0){
+                    document.write(y);
+                    document.write('<br>');
+                }
+                y = y + 1;
+            }
+
+            break;
+        case 'c':
+            var t = 0;
+            var j = 0;
+
+            t = parseInt(t);
+            j = parseInt(j);
+            while (t <= 25) {
+                j = j + 11;
+                document.write(j);
+                document.write('<br>');
+                t = t+1;
+            }
+
+            break;
+        default:
+            document.write("error")
+    }
+</script>
+</body>
+</html>
