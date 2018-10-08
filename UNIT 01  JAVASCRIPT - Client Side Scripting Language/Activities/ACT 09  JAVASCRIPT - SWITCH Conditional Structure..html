@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 9</title>
+</head>
+<body>
+<script>
+    var decision = prompt('1 = traducir (house, table, dog, cat), 2 = meses del año, 3 = vocal o consonante');
+    decision = parseInt(decision);
+    if (decision === 1) {
+        var palabra = prompt('house, table, dog, cat');
+        switch (palabra) {
+            case 'house':
+                document.write('casa');
+                break;
+            case 'table':
+                document.write('mesa');
+                break;
+            case 'dog':
+                document.write('perro');
+                break;
+            case 'cat':
+                document.write('gato');
+                break;
+            default:
+                document.write('error');
+        }
+    } else if (decision === 2) {
+        var numero = prompt('dime un mes en numero');
+        numero = parseInt(numero);
+        switch (numero) {
+            case 1:
+                document.write('enero');
+                break;
+            case 2:
+                document.write('febrero');
+                break;
+            case 3:
+                document.write('marzo');
+                break;
+            case 4:
+                document.write('abril');
+                break;
+            case 5:
+                document.write('mayo');
+                break;
+            case 6:
+                document.write('junio');
+                break;
+            case 7:
+                document.write('julio');
+                break;
+            case 8:
+                document.write('agosto');
+                break;
+            case 9:
+                document.write('septiembre');
+                break;
+            case 10:
+                document.write('octubre');
+                break;
+            case 11:
+                document.write('noviembre');
+                break;
+            case 12:
+                document.write('diciembre');
+                break;
+            default:
+                document.write('error');
+        }
+        document.write('<br>');
+        if(numero === 1 || numero === 3 || numero === 5 || numero === 7 || numero === 8 || numero === 10 || numero === 12){
+            document.write('tiene 31 dias');
+        } else if (numero === 2){
+            document.write('tiene 28 dias, salvo años bisiestos');
+        } else {
+            document.write('tiene 30 dias');
+        }
+    } else if (decision === 3) {
+        var letra = prompt('dime una letra');
+        switch (letra) {
+            case 'a':
+                document.write('vocal');
+                break;
+            case 'e':
+                document.write('vocal');
+                break;
+            case 'i':
+                document.write('vocal');
+                break;
+            case 'o':
+                document.write('vocal');
+                break;
+            case 'u':
+                document.write('vocal');
+                break;
+            default:
+                document.write('consonante');
+        }
+    } else {
+        document.write('error');
+    }
+</script>
+</body>
+</html>
