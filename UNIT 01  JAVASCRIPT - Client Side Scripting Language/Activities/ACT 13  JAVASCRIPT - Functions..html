@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 13</title>
+    <script>
+        function retornarElPequeno(array) {
+            var peq = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] < peq) {
+                    peq = array[i]
+                }
+            }
+            return peq;
+        }
+
+        function ordenar(a) {
+            for (var x = 0; x < a.length; x++) {
+                for (var i = 0; i < a.length-x-1; i++) {
+                    if(a[i] < a[i+1]){
+                        var tmp = a[i+1];
+                        a[i+1] = a[i];
+                        a[i] = tmp;
+                    }
+                }
+            }
+            for (var t = 0; t < (a.length); t++){
+                document.write(a[t]);
+                document.write("<br>")
+            }
+        }
+    </script>
+</head>
+<body>
+<script>
+    var decision = prompt('¿a, b?');
+    switch (decision) {
+        case "a":
+            document.write("el numero pequeño es " + retornarElPequeno(esto = [10, 5, 4, 3, 4, 5,]));
+            break;
+        case "b":
+            ordenar([4,5,4,7,9,8,123,2]);
+            break;
+        default:
+            document.write("error")
+    }
+</script>
+</body>
+</html>
