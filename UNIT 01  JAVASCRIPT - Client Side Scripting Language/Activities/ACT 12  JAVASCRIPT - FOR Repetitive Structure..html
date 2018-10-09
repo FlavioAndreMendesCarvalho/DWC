@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 12</title>
+</head>
+<body>
+<script>
+    var decision = prompt('¿a, b, c?');
+    switch (decision) {
+        case "a":
+            var tr = 0;
+            for (var i = 0; i < 3; i++){
+                var b = parseInt(prompt("base:"));
+                var h = parseInt(prompt("altura:"));
+                if((b*h)/2 > 12){
+                    tr = tr + 1;
+                }
+            }
+            document.write('triangulos que supera 12 de area: ' + tr);
+            break;
+        case "b":
+            var suma = 0;
+            for (var j = 0; j < 10; j++){
+                var u = parseInt(prompt("numero:"));
+                if(j>4){
+                    suma = suma + u;
+                }
+            }
+            document.write("suma de los ultimos 5 numeros = " + suma);
+            break;
+        case "c":
+            for (var q = 1; q <= 10; q++){
+                document.write(5*q);
+                document.write("<br>")
+            }
+            break;
+        default:
+            document.write("error")
+    }
+</script>
+</body>
+</html>
