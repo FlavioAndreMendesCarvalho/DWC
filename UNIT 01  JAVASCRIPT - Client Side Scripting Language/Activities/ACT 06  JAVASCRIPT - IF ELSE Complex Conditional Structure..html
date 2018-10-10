@@ -6,15 +6,48 @@
 </head>
 <body>
 <script>
-    var nota1 = prompt('nota 1', '');
-    var nota2 = prompt('nota 2', '');
-    var media = (parseInt(nota1) + parseInt(nota2)) / 2;
-    if(media < 5){
-        document.write("suspendes")
-    } else if (media === 5) {
-        document.write("justito")
-    } else {
-        document.write("apruebas!!!")
+    var decision = prompt("¿a, b, c, d?");
+    switch (decision) {
+        case "a":
+            var N1 = parseInt(prompt("numero1"));
+            var N2 = parseInt(prompt("numero2"));
+            if(N1 > N2){
+                document.write(N1 + N2);
+            } else {
+                document.write(N2 + N1);
+            }
+            break;
+        case "b":
+            var nota1 = prompt('nota 1', '');
+            var nota2 = prompt('nota 2', '');
+            var media = (parseInt(nota1) + parseInt(nota2)) / 2;
+            if(media < 5){
+                document.write("suspendes")
+            } else if (media === 5) {
+                document.write("justito")
+            } else {
+                document.write("apruebas!!!")
+            }
+            break;
+        case "c":
+            var numero = parseInt(prompt("numero"));
+            if (numero % 2 === 0) {
+                document.write("par");
+            } else {
+                document.write("inpar");
+            }
+            break;
+        case "d":
+            var edad = prompt("edad: ");
+            edad = parseInt(edad);
+            if(edad < 65 || edad > 18){
+                document.write("listo para trabajar");
+            } else {
+                document.write("no puedes trabajar");
+            }
+            break;
+        default:
+            document.write("error")
     }
 </script>
 </body>
