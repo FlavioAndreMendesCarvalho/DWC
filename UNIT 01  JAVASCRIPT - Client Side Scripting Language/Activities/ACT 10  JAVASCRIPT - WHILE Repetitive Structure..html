@@ -38,7 +38,7 @@
             var y = 2;
             y = parseInt(y);
             while (y <= 100) {
-                if(y%2 === 0){
+                if (y % 2 === 0) {
                     document.write(y);
                     document.write('<br>');
                 }
@@ -56,9 +56,91 @@
                 j = j + 11;
                 document.write(j);
                 document.write('<br>');
-                t = t+1;
+                t = t + 1;
             }
 
+            break;
+        case "d":
+            var con = 1;
+            con = parseInt(con);
+            while (con <= 10) {
+                document.write(7*con);
+                document.write("<br>");
+                con = con + 1;
+            }
+            break;
+        case "e":
+            var aprobados = 0;
+            var notasDeTodos = new Array(10);
+            for (var i = 0; i < notasDeTodos.length; i++) {
+                notasDeTodos[i] = parseInt(prompt("nota: "));
+            }
+            for (var p = 0; p < notasDeTodos.length; p++){
+                if (notasDeTodos[p] >= 5){
+                    aprobados = aprobados + 1;
+                }
+            }
+            document.write("aprobaron " + aprobados + " alumnos");
+            document.write("<br>");
+            document.write("suspendieron " + (notasDeTodos.length - aprobados) + " alumnos");
+            break;
+        case "f":
+            var alturas = new Array(5);
+            var suma = 0;
+            for (var contabilizacion = 0; contabilizacion < alturas.length; contabilizacion++) {
+                alturas[contabilizacion] = parseInt(prompt("altura en cm: "));
+                suma = suma + alturas[contabilizacion];
+            }
+            document.write("la media de altura es " + (suma/alturas.length) + " cm");
+
+            break;
+        case "g":
+            var salarios = new Array(5);
+            var sumaDeSalarios = 0;
+            var entre = 0;
+            var superior = 0;
+            for (var para = 0; para < salarios.length; para++) {
+                salarios[para] = parseInt(prompt("salario: "));
+                sumaDeSalarios = sumaDeSalarios + salarios[para];
+                if(salarios[para] > 500 && salarios[para] <= 1000){
+                    entre = entre +1;
+                } else if (salarios[para] > 1000) {
+                    superior = superior + 1;
+                }
+            }
+            document.write("la suma de los salarios es: " + sumaDeSalarios);
+            document.write("<br>");
+            document.write("entre 500 y 1000: " + entre);
+            document.write("<br>");
+            document.write("superiores a 1000: " + superior);
+            break;
+        case "h":
+            var lista1 = new Array(3);
+            var suma1 = 0;
+            var lista2 = new Array(lista1.length);
+            var suma2 = 0;
+            for (var extr = 0; extr < lista1.length; extr++) {
+                lista1[extr] = parseInt(prompt("valor numero " + (extr + 1) + " de la lista 1"));
+                lista2[extr] = parseInt(prompt("valor numero " + (extr + 1) + " de la lista 2"));
+                suma1 = suma1 + lista1[extr];
+                suma2 = suma2 + lista2[extr];
+            }
+            if(suma1 > suma2){
+                document.write("la lista de más valor es la 1");
+            } else if (suma1 < suma2) {
+                document.write("la lista de más valor es la 2");
+            } else {
+                document.write("las listas tienen la misma suma");
+            }
+            break;
+        case "i":
+            var par = 0;
+            for (var algo = 0; algo < 5; algo++) {
+                if (parseInt(prompt("numero")) % 2 === 0) {
+                    par = par + 1;
+                }
+            }
+            document.write("par: " + par + "<br>" + "inpar: " + (5 - par));
             break;
         default:
             document.write("error")
