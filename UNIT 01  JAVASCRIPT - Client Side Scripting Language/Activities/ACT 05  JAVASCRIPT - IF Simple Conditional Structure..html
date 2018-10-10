@@ -6,8 +6,8 @@
 </head>
 <body>
 <script>
-    var decision = prompt('1 = hacer media de la nota, 2 = confirmación correo, 3 = numeros pares');
-    if (decision === "1") {
+    var decision = prompt('¿a, 2 = confirmación correo, 3 = numeros pares');
+    if (decision === "a") {
         var nombre = prompt('Hei, colega... ¿Cómo te llamas?','');
         var examen1 = prompt('dime la nota de tu primer examen','');
         var examen2 = prompt('dime la nota de tu segundo examen','');
@@ -17,13 +17,21 @@
         } else {
             document.write(nombre + " estas suspendido")
         }
-    } else if (decision === "2"){
+    } else if (decision === "b"){
         var correo = prompt('correo','');
         var confirmacion = prompt('confirmación','');
         if (correo !== confirmacion){
             document.write("el correo no es igual")
         }
-    } else if (decision === "3"){
+    } else if(decision === "c"){
+var edad = prompt("edad: ");
+edad = parseInt(edad);
+if(edad < 65 || edad > 18){
+    document.write("eres mayor de edad");
+} else {
+    document.write("eres menor de edad");
+}
+    } else if (decision === "d"){
         var numero = prompt('numero','');
         if (numero%2 === 0){
             document.write("es par")
@@ -31,7 +39,7 @@
             document.write("no es par")
         }
     } else {
-        document.write("haaaaaaaaa")
+        document.write("error")
     }
 </script>
 </body>
