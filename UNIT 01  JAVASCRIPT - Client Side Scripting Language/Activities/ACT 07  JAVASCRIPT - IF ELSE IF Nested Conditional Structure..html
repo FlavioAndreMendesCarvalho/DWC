@@ -6,18 +6,54 @@
 </head>
 <body>
 <script>
-    var notas = new Array(3);
-    notas[0] = prompt('primer numero', '');
-    notas[1] = prompt('Segundo numero', '');
-    notas[2] = prompt('Tercer numero', '');
-    var numeroMayor = notas[0];
+    var decision = prompt("¿a, b, c, d?");
+    switch (decision) {
+        case "a":
+            var notas = new Array(3);
+            notas[0] = prompt('primer numero', '');
+            notas[1] = prompt('Segundo numero', '');
+            notas[2] = prompt('Tercer numero', '');
+            var numeroMayor = notas[0];
 
-    for (var x = 0; x <= notas.length; x++) {
-        if (notas[x] > numeroMayor) {
-            numeroMayor = notas[x];
-        }
+            for (var x = 0; x <= notas.length; x++) {
+                if (notas[x] > numeroMayor) {
+                    numeroMayor = notas[x];
+                }
+            }
+            document.write(numeroMayor);
+            break;
+        case "b":
+            var notas2 = new Array(3);
+            notas2[0] = prompt('primer numero', '');
+            notas2[1] = prompt('Segundo numero', '');
+            notas2[2] = prompt('Tercer numero', '');
+            var numeroMenor = notas2[0];
+
+            for (var p = 0; p <= notas2.length; p++) {
+                if (notas2[p] < numeroMenor) {
+                    numeroMenor = notas2[p];
+                }
+            }
+            document.write(numeroMenor);
+            break;
+        case "c":
+            var numeroGrande = parseInt(prompt('numero grande', ''));
+            numeroGrande = numeroGrande.toString();
+            document.write("el numero tien " + numeroGrande.length + " digitos");
+            break;
+        case "d":
+            var numeroAElegir = parseInt(prompt("numero"));
+            if (numeroAElegir < 0) {
+                document.write("negativo");
+            } else if (numeroAElegir > 0) {
+                document.write("positivo");
+            } else {
+                document.write("es 0")
+            }
+            break;
+        default:
+            document.write("error");
     }
-    document.write(numeroMayor);
 </script>
 </body>
 </html>
