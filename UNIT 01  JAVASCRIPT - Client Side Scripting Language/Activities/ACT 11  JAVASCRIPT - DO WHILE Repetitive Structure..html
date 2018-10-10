@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    var decision = prompt('¿a, b, c, d, e, f, g, h, i?');
+    var decision = prompt('¿a, b, c?');
     switch (decision) {
         case 'a':
 
@@ -44,13 +44,32 @@
                 } else {
                     cantidadMujeres = cantidadMujeres + 1;
                 }
-                if(edad > viejo){
+                if (edad > viejo) {
                     viejo = edad;
                     nombreViejo = id;
                 }
             }
             document.write("Hay " + cantidad + " personas, de las cuales " + cantidadHombres + " son hombres y " + cantidadMujeres
-            + " son mujeres. La persona mas vieja es la de id = " + nombreViejo + " con una edad de " + viejo + "años");
+                + " son mujeres. La persona mas vieja es la de id = " + nombreViejo + " con una edad de " + viejo + "años");
+            break;
+        case "c":
+            var bucle = true;
+            var idCuenta = [];
+            var nombre = [];
+            var dinero = [];
+            do{
+                var idc = parseInt(prompt("id cuenta: "));
+                idCuenta.push(idc);
+                if(idc === 0){
+                    bucle = false;
+                }
+                nombre.push(prompt("nombre propietario: "));
+                dinero.push(parseInt(prompt("dinero: ")));
+            } while (bucle);
+
+            for (var terr = 0; terr < idCuenta.length; terr++) {
+    document.write(nombre[terr] + " es el propietario de la cuenta: " + idCuenta[terr] + " con un total de " + dinero[terr] + "€")
+            }
             break;
         default:
             document.write('error');
