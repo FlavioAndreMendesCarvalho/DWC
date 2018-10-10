@@ -6,18 +6,97 @@
 </head>
 <body>
 <script>
-    var dia = prompt('dia: ', '');
-    var mes = prompt('mes: ', '');
-    var anio = prompt('año: ', '');
+    var decision = prompt("¿a, b, c, d, e?");
+    switch (decision) {
+        case "a":
+            var dia = prompt('dia: ', '');
+            var mes = prompt('mes: ', '');
+            var anio = prompt('año: ', '');
 
-    dia = parseInt(dia);
-    mes = parseInt(mes);
-    anio = parseInt(anio);
+            dia = parseInt(dia);
+            mes = parseInt(mes);
+            anio = parseInt(anio);
 
-    if(dia === 25 && mes === 12 ){
-        document.write("es navidad")
-    } else {
-        document.write("no es navidad")
+            if(dia === 25 && mes === 12 ){
+                document.write("es navidad")
+            } else {
+                document.write("no es navidad")
+            }
+            break;
+        case "b":
+            var todosInferioresA10 = true;
+            var listaNumeros = [prompt("numero 1"), prompt("numero 2"), prompt("numero 3")];
+            for (var i = 0; i < listaNumeros.length; i++) {
+                listaNumeros[i] = parseInt(listaNumeros[i]);
+                if(listaNumeros[i] > 10){
+                    todosInferioresA10 = false;
+                }
+            }
+            if (todosInferioresA10) {
+                document.write("todos los numeros son inferiores a 10")
+            } else {
+                document.write("algún numero es superior a 10")
+            }
+            break;
+        case "c":
+            var X = parseInt(prompt("coordenada X"));
+            var Y = parseInt(prompt("coordenada Y"));
+
+            if (X > 0) {
+                if (Y > 0) {
+                    document.write("1r cuadrante");
+                } else if (Y < 0){
+                    document.write("4o cuadrante");
+                } else {
+                    document.write("entre 1r y 4o cuadrante");
+                }
+            } else if (X < 0) {
+                if (Y > 0) {
+                    document.write("2o cuadrante");
+                } else if (Y < 0){
+                    document.write("3r cuadrante");
+                } else {
+                    document.write("entre 3r y 2o cuadrante");
+                }
+            } else {
+                if (Y > 0) {
+                    document.write("entre 1o y 2o cuadrante");
+                } else if (Y < 0){
+                    document.write("entre 3r y 4o cuadrante");
+                } else {
+                    document.write("justo en medio");
+                }
+            }
+            break;
+        case "d":
+            var salario = parseInt(prompt("salario"));
+            var anios = parseInt(prompt("años en la empresa"));
+            if (salario < 500) {
+                if (anios < 10) {
+                    salario = salario + (salario*0.05);
+                } else {
+                    salario = salario + (salario*0.2);
+                }
+            }
+            document.write(" el salario finál es: " + salario);
+            break;
+        case "e":
+            var todosSuprioresA10 = false;
+            var listaNumeros2 = [prompt("numero 1"), prompt("numero 2"), prompt("numero 3")];
+            for (var cuenta = 0; cuenta < listaNumeros2.length; cuenta++) {
+                listaNumeros2[cuenta] = parseInt(listaNumeros2[cuenta]);
+                if(listaNumeros2[cuenta] > 10){
+                    todosSuprioresA10 = true;
+                }
+            }
+            if (todosSuprioresA10) {
+                document.write("todos los numeros son superiores a 10")
+            } else {
+                document.write("algún numero es inferior a 10")
+            }
+            break;
+        default:
+            document.write("error")
     }
 </script>
 </body>
