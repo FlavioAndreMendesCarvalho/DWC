@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    var decision = prompt('¿a, b, c?');
+    var decision = prompt('¿a, b, c, d, e, f?');
     switch (decision) {
         case "a":
             var tr = 0;
-            for (var i = 0; i < 3; i++){
+            for (var i = 0; i < 3; i++) {
                 var b = parseInt(prompt("base:"));
                 var h = parseInt(prompt("altura:"));
-                if((b*h)/2 > 12){
+                if ((b * h) / 2 > 12) {
                     tr = tr + 1;
                 }
             }
@@ -21,19 +21,89 @@
             break;
         case "b":
             var suma = 0;
-            for (var j = 0; j < 10; j++){
+            for (var j = 0; j < 10; j++) {
                 var u = parseInt(prompt("numero:"));
-                if(j>4){
+                if (j > 4) {
                     suma = suma + u;
                 }
             }
             document.write("suma de los ultimos 5 numeros = " + suma);
             break;
         case "c":
-            for (var q = 1; q <= 10; q++){
-                document.write(5*q);
+            for (var q = 1; q <= 10; q++) {
+                document.write(5 * q);
                 document.write("<br>")
             }
+            break;
+        case "d":
+            var N = parseInt(prompt("numero"));
+            for (var k = N; k <= 10; k++) {
+                document.write(k * N);
+            }
+            break;
+        case "e":
+            var triangulos = new Array(4);
+            for (var l = 0; l < triangulos.length; l++) {
+                triangulos[l] = [parseInt(prompt("angulo del triangulo " + (l + 1))),
+                    parseInt(prompt("angulo del triangulo " + (l + 1))), parseInt(prompt("angulo del triangulo " + (l + 1)))];
+            }
+
+            var equi = 0;
+            var isos = 0;
+            var esca = 0;
+            for (var p = 0; p < triangulos.length; p++) {
+                var diferencias = 0;
+
+                for (var m = 1; m < triangulos[p].length; m++) {
+                    if (triangulos[p][m] !== triangulos[p][m - 1]) {
+                        diferencias = diferencias + 1;
+                    }
+                }
+                document.write("<br>");
+                if (diferencias === 0) {
+                    equi = equi + 1;
+                    document.write("triangulo numero " + p + " es equilatero");
+                } else if(diferencias === 1){
+                    isos = isos + 1;
+                    document.write("triangulo numero " + p + " es isosceles");
+                } else {
+                    esca = esca + 1;
+                    document.write("triangulo numero " + p + " es escaleneo")
+                }
+            }
+            document.write("<br>");
+            document.write(equi + " equilatero");
+            document.write("<br>");
+            document.write(isos + " isosceles");
+            document.write("<br>");
+            document.write(esca +  " escaleneo");
+
+            break;
+        case "f":
+            var posi = 0;
+            var sumP = 0;
+            var inpar = 0;
+            var numeracion = new Array(10);
+            for (var n = 0; n < numeracion.length; n++) {
+                numeracion[n] = parseInt(prompt("numero"));
+            }
+            for (var v = 0; v < numeracion.length; v++) {
+                if (numeracion[v] > 0) {
+                    posi = posi + 1;
+                }
+                if (numeracion[v]%2 !== 0 ){
+                    inpar = inpar + 1;
+                } else {
+                    sumP = sumP + numeracion[v];
+                }
+            }
+            document.write("positivos: " + posi);
+            document.write("<br>");
+            document.write("negativos: " + (numeracion.length - posi));
+            document.write("<br>");
+            document.write("inpares: " + inpar);
+            document.write("<br>");
+            document.write("suma de pares: " + sumP);
             break;
         default:
             document.write("error")
