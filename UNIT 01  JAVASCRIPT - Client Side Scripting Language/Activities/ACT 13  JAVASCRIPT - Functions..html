@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>ACT 13</title>
     <script>
-        function retornarElPequeno(array) {
+
+        function a(array) {
             var peq = array[0];
             for (var i = 1; i < array.length; i++) {
                 if (array[i] < peq) {
@@ -13,8 +14,7 @@
             }
             return peq;
         }
-
-        function ordenar(a) {
+        function b(a) {
             for (var x = 0; x < a.length; x++) {
                 for (var i = 0; i < a.length-x-1; i++) {
                     if(a[i] < a[i+1]){
@@ -29,17 +29,58 @@
                 document.write("<br>")
             }
         }
+        function c(lado) {
+            lado = parseInt(lado);
+            return lado*4;
+        }
+        function d(numero) {
+            var n = numero.toString();
+            return n.length;
+        }
+        function e(numeroParaMedia) {
+            var total = 0;
+            for (var i = 0; i < numeroParaMedia.length; i++) {
+                numeroParaMedia[i] = parseInt(numeroParaMedia[i]);
+                total = total + numeroParaMedia[i];
+            }
+            return (total/numeroParaMedia.length);
+        }
+        function f() {
+            var numeroParaSuma = new Array(5);
+            var total = 0;
+            for (var i = 0; i < numeroParaSuma.length; i++) {
+                numeroParaSuma[i] = prompt("numero");
+                numeroParaSuma[i] = parseInt(numeroParaSuma[i]);
+                total = total + numeroParaSuma[i];
+            }
+            return total;
+        }
+
+
+
     </script>
 </head>
 <body>
 <script>
-    var decision = prompt('¿a, b?');
+    var decision = prompt('¿a, b, c, d, e, f?');
     switch (decision) {
         case "a":
-            document.write("el numero pequeño es " + retornarElPequeno(esto = [10, 5, 4, 3, 4, 5,]));
+            document.write("el numero pequeño es " + a(esto = [10, 5, 4, 3, 4, 5,]));
             break;
         case "b":
-            ordenar([4,5,4,7,9,8,123,2]);
+            b([4,5,4,7,9,8,123,2]);
+            break;
+        case "c":
+            document.write("perimetro: " + c(prompt("lado")));
+            break;
+        case "d":
+            document.write("digitos: " + d(prompt("numero")));
+            break;
+        case "e":
+            document.write("media: " + e([prompt("numero"), prompt("numero"), prompt("numero")]));
+            break;
+        case "f":
+            document.write("suma: " + f());
             break;
         default:
             document.write("error")
