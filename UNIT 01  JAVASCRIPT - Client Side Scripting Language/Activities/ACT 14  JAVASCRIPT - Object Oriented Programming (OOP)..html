@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 14</title>
+    <script>
+        class a {
+
+            constructor(num1, num2) {
+                this.num1 = num1;
+                this.num2 = num2;
+            }
+
+            get suma() {
+                return this.num1 + this.num2;
+            }
+        }
+
+        class b1 {
+            constructor(name, age) {
+                this.age = age;
+            }
+        }
+
+        class b2 {
+            constructor(name, topAge) {
+                this.topAge = topAge;
+                this.personal = [];
+            }
+        }
+    </script>
+</head>
+<body>
+<script>
+    var decision = prompt("¿a, b?");
+    switch (decision) {
+        case "a":
+            var classA = new a(2, 3);
+            document.write("suma: " + classA.suma);
+            break;
+        case "b":
+            var empresa = new b2(prompt("nombre empresa"), parseInt(prompt("top edad")));
+            var personas = [new b1(prompt("nombre empleado"), parseInt(prompt("edad"))), new b1(prompt("nombre empleado"), parseInt(prompt("edad")))];
+            for (var i = 0; i < personas.length; i++) {
+                if(personas[i].age < empresa.topAge){
+                    empresa.personal.push(personas[i]);
+                }
+            }
+            document.write("personal de la empresa: " + empresa.personal.length);
+
+            break;
+        default:
+            document.write("error");
+    }
+</script>
+</body>
+</html>
