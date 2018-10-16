@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 17</title>
+    <script>
+        function a() {
+            var n = parseInt(prompt("numero a elevar"));
+            var elevado = Math.pow(n, 3);
+            document.write(elevado);
+        }
+        function b() {
+            var n = parseInt(prompt("numero a elevar"));
+            var sqare = Math.sqrt(n);
+            document.write(sqare);
+        }
+    </script>
+</head>
+<body>
+<script>
+    var decision = prompt("¿a, b?");
+    switch (decision) {
+        case "a":
+           a();
+            break;
+        case "b":
+            b();
+            break;
+        default:
+            document.write("error")
+    }
+</script>
+</body>
+</html>
