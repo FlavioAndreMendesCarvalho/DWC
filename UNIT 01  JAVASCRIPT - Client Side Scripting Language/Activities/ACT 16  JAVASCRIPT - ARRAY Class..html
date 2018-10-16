@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 16</title>
+    <script>
+        function a(array1) {
+            var suma = 0;
+            var sumaSup = 0;
+            var cant = 0;
+            for (var i = 0; i < array1.length; i++) {
+                suma = suma + array1[i];
+                if (array1[i] > 5) {
+                    sumaSup = sumaSup + array1[i];
+                    cant = cant + 1;
+                }
+            }
+            document.write("suma de todo: " + suma);
+            document.write("<br>");
+            document.write("medi de todo: " + (suma / array1.length));
+            document.write("<br>");
+            document.write("suma elementos superiores a 5: " + sumaSup);
+            document.write("<br>");
+            document.write("cantidad elementos superiores a 5: " + cant);
+            document.write("<br>");
+        }
+
+        function b(array2) {
+            for (var i = 2; i < array2.length; i++) {
+                array2[i] = (array2[i - 1] + array2[i - 2])
+            }
+            for (var k = 0; k < array2.length; k++) {
+                document.write(array2[k] + "<br>");
+            }
+
+        }
+    </script>
+</head>
+<body>
+<script>
+    var decision = prompt("¿a, b?");
+    switch (decision) {
+        case "a":
+            var array = [];
+            for (var i = 0; i < 8; i++) {
+                array.push(parseInt(prompt("numero")));
+                document.write(array[i]);
+                document.write("<br>");
+            }
+            a(array);
+            break;
+        case "b":
+            var array2 = new Array(parseInt(prompt("numero de posiciones del vector")));
+            array2[0] = parseInt(prompt("primero numero: "));
+            array2[1] = parseInt(prompt("segundo numero: "));
+            b(array2);
+            break;
+        default:
+            document.write("error");
+    }
+</script>
+</body>
+</html>
