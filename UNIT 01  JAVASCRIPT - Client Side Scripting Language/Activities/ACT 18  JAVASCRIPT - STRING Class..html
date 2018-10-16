@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 18</title>
+    <script>
+function a() {
+    var control = true;
+    var sum = 0;
+    while (control){
+        if(prompt("introduce un nombre") === "fin"){
+            control = false;
+        } else {
+            sum = sum + 1;
+        }
+    }
+    document.write("numero de nombes: " + sum);
+}
+function b() {
+    var num = "cien tigres fueron devorados por un elefante cuando la mariposa tropezo".indexOf(prompt("la palabra que quiera buscar " +
+        "en: cien tigres fueron devorados por un elefante cuando la mariposa tropezo "));
+
+    if (num >= 0){
+        document.write("se encuentra en la posicion: " + num);
+    } else {
+        document.write("no se encuentra")
+    }
+}
+function c() {
+    var nombre = prompt("polindromo");
+    var nombreGir = "";
+    for (var i = nombre.length; i >= 0; i--) {
+        nombreGir = nombreGir + nombre.charAt(i);
+    }
+    document.write("original: " + nombre);
+    document.write("<br>");
+    document.write("al reves: " + nombreGir);
+    document.write("<br>");
+    document.write(nombreGir === nombre);
+}
+function d() {
+    var email = prompt("email:");
+    if (email.indexOf("@") >= 0){
+        document.write("tiene @")
+    } else {
+        document.write("no tiene @")
+    }
+
+}
+function e() {
+    document.write("este ejercicio está en desarrollo, disculpen las molestias")
+}
+function f() {
+    var frase = prompt("dime una frase");
+    for (var i = 0; i < frase.length; i++) {
+        document.write(frase.charAt(i) + "<br>");
+    }
+}
+    </script>
+</head>
+<body>
+<script>
+    var decision = prompt("¿a, b, c, d, e, f?");
+    switch (decision) {
+        case "a":
+            a();
+            break;
+        case "b":
+            b();
+            break;
+        case "c":
+            c();
+            break;
+        case "d":
+            d();
+            break;
+        case "e":
+            e();
+            break;
+        case "f":
+            f();
+            break;
+        default:
+            document.write("error");
+    }
+</script>
+</body>
+</html>
