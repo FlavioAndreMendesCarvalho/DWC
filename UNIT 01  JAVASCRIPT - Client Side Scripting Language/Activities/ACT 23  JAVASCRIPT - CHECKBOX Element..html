@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 23</title>
+    <script>
+function a() {
+    var deportes = "";
+    if (document.getElementById('checkbox1').checked) {
+        deportes = deportes + " futbol";
+    }
+    if (document.getElementById('checkbox2').checked) {
+        deportes = deportes + " basquet";
+    }
+    if (document.getElementById('checkbox3').checked) {
+        deportes = deportes + " tenis";
+    }
+    if (document.getElementById('checkbox4').checked) {
+        deportes = deportes + " hockey";
+    }
+    alert(deportes);
+}
+    </script>
+</head>
+<body>
+<form>
+    <label for="checkbox1"></label><input type="checkbox" id="checkbox1">futbol
+    <br>
+    <label for="checkbox2"></label><input type="checkbox" id="checkbox2">basquet
+    <br>
+    <label for="checkbox3"></label><input type="checkbox" id="checkbox3">tenis
+    <br>
+    <label for="checkbox4"></label><input type="checkbox" id="checkbox4">hockey
+    <br>
+    <input type="button" value="Count" onClick="a()">
+</form>
+</body>
+</html>
