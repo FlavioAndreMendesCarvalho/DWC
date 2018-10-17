@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 20</title>
+    <script>
+        function a() {
+            var a = document.getElementById("numero").value;
+            alert("has escrito: " + a);
+        }
+        function b() {
+            var b = document.getElementById("numerocom1").value;
+            var b2 = document.getElementById("numerocom2").value;
+
+            if(b > b2){
+                alert("el mas grande es " + b)
+            } else {
+                alert("el mas grande es " + b2)
+            }
+        }
+        function c() {
+            var c = document.getElementById("nombre").value;
+            var c2 = document.getElementById("apellido").value;
+            alert(c + " " + c2)
+        }
+    </script>
+</head>
+<body>
+<form>
+    mete un numero: <label for="numero"></label><input type="text" id="numero"><br/>
+    <input type="button" value="decir numero" onClick="a()">
+    <br>
+    mete un numero: <label for="numerocom1"></label><input type="text" id="numerocom1"><br/>
+    mete un numero: <label for="numerocom2"></label><input type="text" id="numerocom2"><br/>
+    <input type="button" value="comparar" onClick="b()">
+    <br>
+    nombre: <label for="numerocom1"></label><label for="nombre"></label><input type="text" id="nombre"><br/>
+    apellido: <label for="numerocom2"></label><label for="apellido"></label><input type="text" id="apellido"><br/>
+    <input type="button" value="concatenar" onClick="c()">
+</form>
+</body>
+</html>
