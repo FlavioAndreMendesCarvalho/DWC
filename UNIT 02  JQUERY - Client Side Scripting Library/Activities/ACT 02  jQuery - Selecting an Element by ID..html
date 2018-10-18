@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 02</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table width="100%" >
+    <tr id="1">
+        <th>Rojo</th>
+    </tr>
+    <tr id="2">
+        <th>Azul</th>
+    </tr>
+    <tr id="3">
+        <th>Verdoso</th>
+    </tr>
+    <tr id="4">
+        <th>Musgo</th>
+    </tr>
+    <tr id="5">
+        <th>Morado</th>
+    </tr>
+    <tr id="6">
+        <th>Marron</th>
+    </tr>
+</table>
+<script>
+    $("tr").css("height", "100px");
+    $("#1").click(function () {
+        $(this).css("background", "#7b3639");
+    });
+    $("#2").click(function () {
+        $(this).css("background", "#44497b");
+    });
+    $("#3").click(function () {
+        $(this).css("background", "#3c7b72");
+    });
+    $("#4").click(function () {
+        $(this).css("background", "#5c7b3d");
+    });
+    $("#5").click(function () {
+        $(this).css("background", "#7b3b79");
+    });
+    $("#6").click(function () {
+        $(this).css("background", "#7b5a2d");
+    });
+</script>
+</body>
+</html>
