@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 25</title>
+</head>
+<body>
+<form action="#" onsubmit="mostrar()">
+    <input type="text" id="name" placeholder="Nombre">
+    <input type="text" id="email" placeholder="Email">
+    <label for="comment">Comentario:</label>
+    <textarea id="comment"></textarea>
+    <input type="submit" value="mostrar()">
+</form>
+<script>
+    function mostrar() {
+        var a = document.getElementById("name");
+        var b = document.getElementById("email");
+        var c = document.getElementById("comment");
+        alert(
+            "Nombre: " + a.value + "\n" +
+            "Email: " + b.value + "\n" +
+            "Comentario: " + c.value
+        );
+    }
+</script>
+</body>
+</html>
