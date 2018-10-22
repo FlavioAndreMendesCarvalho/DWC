@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 27</title>
+    <style>
+        td {
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+<script>
+    let tr = document.getElementsByTagName("tr");
+    for (let i = 0; i < tr.length; i++) {
+        tr[i].addEventListener("mouseover", function () {
+            tr[i].bgColor = "darkgray";
+        });
+        tr[i].addEventListener("mouseout", function () {
+            tr[i].bgColor = "white";
+        });
+    }
+</script>
+</body>
+</html>
