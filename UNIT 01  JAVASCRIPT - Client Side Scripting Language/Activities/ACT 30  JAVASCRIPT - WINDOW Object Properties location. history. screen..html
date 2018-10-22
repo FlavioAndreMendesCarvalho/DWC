@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 30</title>
+</head>
+<body>
+<a href="" onclick="loadPage(this)" target="_blank">Random Link</a>
+<hr>
+<button onclick="popup()">Open popup window</button>
+<hr>
+
+<script>
+    function loadPage(a) {
+        let rand = Math.floor(Math.random() * 3);
+        let link;
+        switch (rand) {
+            case 0:
+                link = "https://google.es";
+                break;
+            case 1:
+                link = "https://www.youtube.com/?gl=ES&hl=es";
+                break;
+            case 2:
+                link = "https://www.cocacola.es/es/home/";
+                break;
+            default:
+                throw new DOMException("Number generated is not valid");
+        }
+        a.href = link;
+    }
+    function popup() {
+        window.open('', '', 'width=' + screen.width + ', height=' + (screen.height / 2));
+    }
+    alert("Are cookies enabled? " + (navigator.cookieEnabled ? "yes" : "no"));
+</script>
+</body>
+</html>
