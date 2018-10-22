@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 4</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table id="tabla1" width="100%">
+    <tr>
+        <th>Cambiar fondo</th>
+    </tr>
+    <tr>
+        <th>Cambiar fondo</th>
+    </tr>
+    <tr>
+        <th>Cambiar fondo</th>
+    </tr>
+</table>
+<table id="tabla2" width="100%">
+    <tr>
+        <th>tamaño texto</th>
+    </tr>
+    <tr>
+        <th>tamaño texto</th>
+    </tr>
+    <tr>
+        <th>tamaño texto</th>
+    </tr>
+</table>
+<script>
+    $("tr").css("height", "70px");
+    $("#tabla1 tr").click(function () {
+        $(this).css("background", "silver");
+    });
+</script>
+</body>
+</html>
