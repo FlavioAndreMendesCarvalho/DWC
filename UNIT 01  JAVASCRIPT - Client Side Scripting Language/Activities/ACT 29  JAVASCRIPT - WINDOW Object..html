@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 29</title>
+</head>
+<body>
+<button onclick="openWindow()">Open Window</button>
+<script>
+    function openWindow() {
+        let w = window.open("", "", "width=600,height=300");
+        let b = '<button onclick="window.close()">Close Window</button>';
+        w.document.write(b);
+    }
+</script>
+</body>
+</html>
