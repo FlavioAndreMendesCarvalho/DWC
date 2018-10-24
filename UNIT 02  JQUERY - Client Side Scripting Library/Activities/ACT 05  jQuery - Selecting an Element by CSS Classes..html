@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 05</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>TITULO</h1>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse inventore omnis recusandae suscipit? Culpa dolorem
+    illo laboriosam repellat saepe voluptate!</P>
+<h1>TITULO</h1>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse inventore omnis recusandae suscipit? Culpa dolorem
+    illo laboriosam repellat saepe voluptate!</P>
+<h1>TITULO</h1>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse inventore omnis recusandae suscipit? Culpa dolorem
+    illo laboriosam repellat saepe voluptate!</P>
+<h1>TITULO</h1>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse inventore omnis recusandae suscipit? Culpa dolorem
+    illo laboriosam repellat saepe voluptate!</P>
+<h1>TITULO</h1>
+<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse inventore omnis recusandae suscipit? Culpa dolorem
+    illo laboriosam repellat saepe voluptate!</P>
+<button id="peque">pequeño</button>
+<button id="media">mediano</button>
+<button id="grand">grande</button>
+<script>
+    var tamanioInicialH = $("h1").css("font-size");
+    var tamanioInicialP = $("p").css("font-size");
+    tamanioInicialH = parseInt(tamanioInicialH);
+    tamanioInicialP = parseInt(tamanioInicialP);
+    $("#peque").click(function () {
+        $("p:odd").css("font-size", tamanioInicialP - 10);
+        $("h1:odd").css("font-size", tamanioInicialH - 10);
+    });
+    $("#media").click(function () {
+        $("p:odd").css("font-size", tamanioInicialP);
+        $("h1:odd").css("font-size", tamanioInicialH);
+    });
+    $("#grand").click(function () {
+        $("p:odd").css("font-size", tamanioInicialP + 25);
+        $("h1:odd").css("font-size", tamanioInicialH + 25);
+    });
+</script>
+</body>
+</html>
