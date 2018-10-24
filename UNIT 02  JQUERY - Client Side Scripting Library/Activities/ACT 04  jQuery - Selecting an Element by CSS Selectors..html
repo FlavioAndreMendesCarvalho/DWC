@@ -33,6 +33,11 @@
     $("#tabla1 tr").click(function () {
         $(this).css("background", "silver");
     });
+    $("#tabla2 tr").click(function () {
+        var tamanio = $(this).css("font-size");
+        tamanio = parseInt(tamanio);
+        $(this).css("font-size", tamanio + 5);
+    });
 </script>
 </body>
 </html>
