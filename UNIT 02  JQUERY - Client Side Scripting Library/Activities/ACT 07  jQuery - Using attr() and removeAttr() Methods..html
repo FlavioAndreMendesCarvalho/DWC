@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 7</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<a href="">link</a>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<script>
+    $("button:eq(0)").click(function () {
+        $("a").attr("href", "https://www.google.ca/");
+    });
+    $("button:eq(1)").click(function () {
+        $("a").attr("href", "http://aulavirtual.caib.es/c07002208/course/index.php?categoryid=19");
+    });
+    $("button:eq(2)").click(function () {
+        $("a").attr("href", "https://www.youtube.com/");
+    });
+</script>
+</body>
+</html>
