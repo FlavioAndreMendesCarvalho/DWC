@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST 02</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            border: 1px solid black;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 500px;
+            height: 30px;
+        }
+
+        th {
+            font-family: "Century Gothic", serif;
+            font-size: 40px;
+        }
+
+        tr {
+            border: red 1px solid;
+        }
+
+        td {
+            border: green 1px solid;
+            text-align: center;
+            width: 500px;
+        }
+
+        .full {
+            width: 100%;
+        }
+    </style>
+    <script>
+        var array = [];
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="3">Biblioteca general de Flavio</th>
+    </tr>
+    <tr>
+        <td><h3>Titulo:</h3></td>
+        <td colspan="2"><input type="text" placeholder="titulo" class="full" id="tit"></td>
+    </tr>
+    <tr>
+        <td><h3>Num pag:</h3></td>
+        <td colspan="2"><input type="text" placeholder="numero de paginas" class="full" id="pag"></td>
+    </tr>
+    <tr>
+        <td><h3>Categoría:</h3></td>
+        <td colspan="2">
+            <label for="selectCategoria"></label><select id="selectCategoria" class="full">
+            <option value="1">Ciencia</option>
+            <option value="2">drama</option>
+            <option value="3">historia</option>
+            <option value="4">ficción</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td><h3>Fila y columna:</h3></td>
+        <td>
+            <select id="fila" class="full">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </td>
+        <td>
+            <select id="columna" class="full">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <button id="add">Añadir</button>
+        </td>
+        <td>
+            <button id="delete">Eliminar</button>
+        </td>
+    </tr>
+</table>
+<script>
+    $("#add").click(function () {
+        var libro = $("<div>");
+        var titulo = $("#tit").text();
+        var paginas = $("#pag").text();
+        var categoria = $("#selectCategoria").value;
+
+        libro.append(titulo, paginas, categoria);
+        mostrador(libro);
+    });
+
+    function mostrador(libro) {
+        var posX = parseInt($("#columna").value);
+        var posY = parseInt($("#fila").value);
+        var table = $("<table>");
+
+        for (var i = 0; i < 3; i++) {
+            var fila = $("<tr>");
+            for (var j = 0; j < 3; j++) {
+                var columna = $("<td>");
+                if (i === posX && j === posY) {
+                    columna.append(libro);
+                } else {
+
+                }
+                fila.append(columna)
+            }
+            tabla.append(fila);
+        }
+
+
+        $("body").append(tabla);
+    }
+</script>
+</body>
+</html>
