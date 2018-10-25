@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 15px;
+        }
+
+        button {
+            width: 600px;
+            height: 50px;
+        }
+
+        tr {
+            border: solid silver 1px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            font-family: "Century Gothic", serif;
+            font-size: 30px;
+        }
+
+
+        .full {
+            width: 300px;
+            height: 50px;
+            margin: 10px 30px 10px 30px;
+        }
+
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">
+            <h1>Cuenta Pulsaciones</h1>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button id="add">Añadir</button>
+        </th>
+        <th>
+            <button id="delete">Eliminar</button>
+        </th>
+    </tr>
+</table>
+<script>
+
+    var contador = 0;
+
+    $("#add").click(function () {
+        var linea = $("<tr>");
+        linea.attr("id", "tr" + contador);
+        linea.addClass("temp");
+
+        var col1 = $("<td>");
+        var col2 = $("<td>");
+
+        var entrada = $("<input>");
+        entrada.val("pulsación num: " + contador);
+        entrada.addClass("full");
+
+        var boton = $("<button>");
+        boton.click(function () {
+            $(this).parent().parent().hide(200);
+        });
+        boton.addClass("full");
+        boton.text("eliminar pulsación:" + contador);
+
+
+        col1.append(entrada);
+        col2.append(boton);
+        linea.append(col1, col2);
+        $("table").append(linea);
+        contador = contador + 1;
+
+
+    });
+    $("#delete").click(function () {
+        $(".temp").hide(500);
+        contador = 0;
+    });
+</script>
+</body>
+</html>
