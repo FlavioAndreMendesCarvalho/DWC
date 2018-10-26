@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 14</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button>hola</button>
+<button>adios</button>
+<script>
+    $("button").mousedown(function () {
+        $(this).css("background", "red")
+    }).mouseup(function () {
+        $(this).css("background", "blue")
+    });
+</script>
+</body>
+</html>
