@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 15</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            border: 1px silver solid;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<script>
+    var cont = 0;
+    $("div").dblclick(function () {
+        if (cont % 2 === 0) {
+            $(this).css("background", "silver");
+        } else {
+            $(this).css("background", "white");
+        }
+        cont = cont + 1;
+    });
+</script>
+</body>
+</html>
