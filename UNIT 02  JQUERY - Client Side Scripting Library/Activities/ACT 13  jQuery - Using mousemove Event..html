@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 13</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid #76c062;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<p id="corx">coordinate x=</p>
+<p id="cory">coordinate y=</p>
+<script>
+    $("div").mouseenter(function () {
+        var x;
+        x = $(this);
+        x.mousemove(moveMouse);
+    }).mouseleave(function () {
+        var x;
+        x = $("#corx");
+        x.text("coordinate x= fuera de servicio");
+        x = $("#cory");
+        x.text("coordinate y= fuera de servicio");
+        alert("el raton no está en el div")
+    });
+
+    function moveMouse(event) {
+        var x;
+        x = $("#corx");
+        x.text("coordinate x=" + event.clientX);
+        x = $("#cory");
+        x.text("coordinate y=" + event.clientY);
+    }
+
+
+</script>
+</body>
+</html>
