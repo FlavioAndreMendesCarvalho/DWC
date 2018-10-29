@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 17</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" placeholder="Input 1">
+<input type="text" placeholder="Input 2">
+<script>
+    $("input[type=text]").blur(function () {
+        if ($(this).val() === "")
+            alert("Filed can't be empty");
+    });
+</script>
+</body>
+</html>
