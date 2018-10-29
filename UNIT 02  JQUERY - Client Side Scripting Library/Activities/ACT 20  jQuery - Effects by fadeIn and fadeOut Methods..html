@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACT 20</title>
+    <style>
+        #div2 {
+            display: none;
+        }
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="div1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda accusamus itaque repellat ex totam, nemo, eum dicta, beatae aut reprehenderit enim quo blanditiis?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque molestias, quisquam veritatis sequi, et, eius assumenda maiores ad consectetur dolorem earum dolorum illum dignissimos deleniti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci consectetur ab eaque illum praesentium ratione voluptatum saepe, fugiat delectus ducimus nobis ipsa enim maxime harum. Nulla necessitatibus ipsum alias deleniti consectetur in earum, quia eligendi voluptatem culpa? Aperiam praesentium iste maxime dolor?</p>
+</div>
+<div id="div2">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusantium aliquid ea libero necessitatibus eum quae saepe maxime eveniet voluptatum, cupiditate quidem nulla quod.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem eligendi magni repellendus cumque minima placeat. Consequuntur soluta eveniet blanditiis ex odio tempora officia harum sunt nesciunt quas veniam molestiae non, quasi doloremque saepe magnam a aliquam quod nisi voluptas eum. Ab illo quod doloremque mollitia!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore molestias sapiente facere nesciunt, accusantium suscipit similique numquam quisquam perferendis quis quia minima exercitationem dolorem vitae nulla animi id. Enim quisquam sed, soluta alias eveniet quis.</p>
+</div>
+<script>
+    $("#div1").click(function () {
+        $(this).fadeOut(1000, function() {
+            $("#div2").fadeIn(1000);
+        });
+    });
+</script>
+</body>
+</html>
