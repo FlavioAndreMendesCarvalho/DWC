@@ -1,10 +1,10 @@
 <?php
-require_once '../login.php';
+require_once 'conn.php';
 try{
+
     $mbd = new PDO($dsn, $user, $pass);
-    $idPort = $_GET["port"];
-    $statement = $mbd->prepare("SELECT * FROM zona WHERE idPort = :idPortt");
-    $statement->bindParam(':idPortt', $idPort);
+
+    $statement = $mbd->prepare("SELECT * FROM persona");
     $statement->execute();
 
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);

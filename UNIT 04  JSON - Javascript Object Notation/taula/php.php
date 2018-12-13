@@ -1,5 +1,5 @@
 <?php
-require_once '../login.php';
+require_once '../conn.php';
 try{
 
     $mbd = new PDO($dsn, $user, $pass);
