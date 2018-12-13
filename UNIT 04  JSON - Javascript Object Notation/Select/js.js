@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    conexion(fun);
+    conexion("thePhp", fun);
 });
 
 

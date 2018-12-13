@@ -1,18 +1,17 @@
 <?php
-require_once '../conn.php';
-try{
-    $mbd = new PDO($dsn, $user, $pass);
-    $idPort = $_GET["port"];
-    $statement = $mbd->prepare("SELECT * FROM zona WHERE idPort = :idPortt");
-    $statement->bindParam(':idPortt', $idPort);
+
+require_once "../conn.php";
+
+$idPort = $_GET["idPort"];
+$query = 'SELECT * FROM zona WHERE idPort = :idPort';
+
+try {
+    $statement = $conn->prepare($query);
+    $statement->bindParam(':idPort', $idPort);
     $statement->execute();
-
-    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($results);
-
-    $mbd = null;
-
-} catch (PDOException $e){
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    print $e->getMessage();
 }
+
+echo json_encode($result);
