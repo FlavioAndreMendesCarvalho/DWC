@@ -1,10 +1,6 @@
-
-
-$(document).ready(function(){
+$(document).ready(function () {
     conexion(fun);
 });
-
-
 
 
 function fun(busqueda) {
@@ -16,8 +12,7 @@ function fun(busqueda) {
         var matricula = vaixells[c].matricula;
 
 
-        var item = $("<a/>", {href:"#", class:'dropdown-item', text:nom + ", " + matricula});
-        $("#meuDrop").append(item);
-
+        var item = $("<option/>", {value: matricula, text: nom + ", " + matricula});
+        $("#meuSelect").append(item);
     }
 }
