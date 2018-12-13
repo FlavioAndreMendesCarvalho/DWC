@@ -1,4 +1,5 @@
 <?php
+
 require_once "../conn.php";
 
 $query = 'SELECT * FROM vaixell';
@@ -11,4 +12,4 @@ try {
     print $e->getMessage();
 }
 
-echo json_encode("resultado" . $result);
+echo json_encode($result);
