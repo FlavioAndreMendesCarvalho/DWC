@@ -7,6 +7,6 @@ function conexion(fun) {
         }
     };
 
-    xhttp.open("GET", "php.php", true);
+    xhttp.open("GET", "thePhp.php", true);
     xhttp.send();
 }
