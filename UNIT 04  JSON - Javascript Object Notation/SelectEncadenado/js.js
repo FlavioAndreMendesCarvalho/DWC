@@ -1,5 +1,7 @@
 var select1 = $("#select1");
 var select2 = $("#select2");
+
+
 $(document).ready(function () {
     organizador();
     conexion("php1", loadPort);
