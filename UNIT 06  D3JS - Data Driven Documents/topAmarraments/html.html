@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../OneDirectoryForAll/css/bootstrap.min.css"/>
+    <style>
+        svg{
+            width: 600px;
+            height: 300px;
+            border: 1px solid rgba(90, 98, 104, 0.66);
+        }
+        line{
+            stroke: #062c33;
+        }
+
+        line:hover{
+            stroke: #061c23;
+        }
+    </style>
+</head>
+<body class="bg-light" style="height: 100vh">
+
+<div class="d-flex justify-content-center align-items-center flex-wrap w-100 h-100">
+
+
+    <svg id="svg">
+    </svg>
+
+</div>
+
+
+
+<script src="../../OneDirectoryForAll/js/jquery/jquery.js"></script>
+<script src="../../OneDirectoryForAll/js/bootstrap.bundle.min.js"></script>
+<script src="../../OneDirectoryForAll/js/D3/d3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var datos = [90, 200, 50, 150, 110, 200, 50, 150, 110, 200, 50, 150, 110, 200, 50, 150, 110];
+        var sep = $("#svg").css("width").replace("px", "") / (datos.length - 1);
+        var config = { separation: sep};
+
+        d3.select("svg")
+            .selectAll("line")
+            .data(datos)
+            .enter().append("line")
+            .attr("x1", function(d,i) {
+                return (i - 1) * (config.separation);
+            })
+            .attr("y1", function (d, i) {
+                if (i > 0) {
+                    return datos[i - 1];
+                } else {
+                    return d;
+                }
+            })
+            .attr("x2", function(d,i) {
+                return i * (config.separation);
+            })
+            .attr("y2", function(d) {
+                return d;
+            });
+    });
+
+</script>
+</body>
+</html>
