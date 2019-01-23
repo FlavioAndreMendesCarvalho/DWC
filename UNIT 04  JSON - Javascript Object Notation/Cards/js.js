@@ -14,7 +14,7 @@ function loadcardsPort(busqueda) {
                 }
                 i++;
 
-                var coordenades = ports[m].coordenades;
+                var coordenades = ports[m].longitud + " " + ports[m].latitud;
                 var telefon = ports[m].telefon;
                 var correu = ports[m].correu;
                 var web = ports[m].web;

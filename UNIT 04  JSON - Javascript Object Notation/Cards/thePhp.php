@@ -2,7 +2,7 @@
 
 require_once "../conn.php";
 
-$query = 'SELECT * FROM port';
+$query = 'SELECT * FROM "port"';
 
 try {
     $statement = $conn->prepare($query);
@@ -11,5 +11,4 @@ try {
 } catch (PDOException $e) {
     print $e->getMessage();
 }
-
-echo json_encode($result);
+echo "todo: " . json_encode($result);

@@ -2,7 +2,7 @@
 
 require_once "../conn.php";
 
-$query = 'SELECT * FROM port';
+$query = 'select * from port';
 
 try {
     $statement = $conn->prepare($query);
