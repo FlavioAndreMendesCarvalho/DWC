@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    conexion("thePhp", loadPersona);
+
 });
 
 function loadPersona(busqueda) {
