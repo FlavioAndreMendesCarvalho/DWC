@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="../../OneDirectoryForAll/css/bootstrap.min.css"/>
     <style>
         svg {
-            width: 600px;
-            height: 300px;
             border: 1px solid rgba(90, 98, 104, 0.66);
         }
 
@@ -25,7 +23,7 @@
 
 <div class="d-flex justify-content-center align-items-center flex-wrap w-100 h-100">
 
-    <svg id="svg">
+    <svg class="w-75 h-50" id="svg">
     </svg>
 
 </div>
@@ -38,12 +36,16 @@
 <script>
     $(document).ready(function () {
 
+
         conexion("thePhp", general);
 
         function general(idsAmarr) {
             var idsAmarrSimple = searchMoring(idsAmarr);
             var datos = compactMoorings(idsAmarrSimple);
             createSVG(datos);
+            $(window).resize(function() {
+                createSVG(datos);
+            });
         }
 
         function searchMoring(idsAmarr) {
@@ -75,6 +77,7 @@
 
         function createSVG(datos) {
             var svg = $("#svg");
+            svg.empty();
             var w = svg.css("width").replace("px", "");
             var h = svg.css("height").replace("px", "");
             var valMax = datos[datos.length - 1].rep;
